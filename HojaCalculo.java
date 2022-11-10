@@ -97,13 +97,13 @@ public class HojaCalculo
      */
     public void addFila(Fila fila) {
         if (fila1 == null){
-            
+            fila1 = fila;
         }   
         else if(fila2 == null){
-            
+            fila2 = fila;
         }
         else if(fila2 == null){
-        
+            fila3 = fila;
         }
         else{
             System.out.println("FilaX no se puede añadir en HOJAX");
@@ -118,8 +118,8 @@ public class HojaCalculo
      * (evita repetir código)
      */
     public void addFila(String id, Fecha fecha, double ingresos, double gastos) {
-         
-
+        new Fila(id, fecha, ingresos, gastos); 
+        
     }
 
     /**
@@ -127,10 +127,8 @@ public class HojaCalculo
      * todas las filas que incluye la hoja
      */
     public double getTotalIngresos() {
-         
-
-        return 0;
-
+        return fila1.getIngresos() + fila2.getIngresos() + fila3.getIngresos();
+        
     }
 
     /**
@@ -138,7 +136,7 @@ public class HojaCalculo
      * entre todas las filas que incluye la hoja
      */
     public double getTotalGastos() {
-        return 0;
+        return fila1.getGastos() + fila2.getGastos() + fila3.getGastos();
 
     }
 
@@ -147,7 +145,7 @@ public class HojaCalculo
      * entre todas las filas que incluye la hoja
      */
     public double getBeneficio() {
-        return 0;
+        return fila1.getBeneficio() + fila2.getBeneficio() + fila3.getBeneficio();
 
     }
 

@@ -74,8 +74,9 @@ public class Fecha
      * Devuelve una copia exacta al objeto actual
      */
     public Fecha obtenerCopia() {
-         return null;
-
+        Fecha copia = null;
+        copia = super.clone();
+        return copia;
     }
 
     /**

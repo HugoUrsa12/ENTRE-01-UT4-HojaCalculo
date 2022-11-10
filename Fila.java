@@ -28,7 +28,7 @@ public class Fila
      */
     public Fila(String id, Fecha fecha, double ingresos, double gastos)    {
         this.id = id;
-        
+        this.fecha = fecha;
         this.ingresos = ingresos;
         this.gastos = gastos;
     

@@ -19,16 +19,19 @@ public class Fila
      * Constructor  
      */
     public Fila(String id)    {
-         
-
+        this.id = id;
+        this.fecha = new Fecha(1,1,2020);
     }
 
     /**
      * Constructor  
      */
     public Fila(String id, Fecha fecha, double ingresos, double gastos)    {
+        this.id = id;
         
-
+        this.ingresos = ingresos;
+        this.gastos = gastos;
+    
     }
     
     /**
@@ -87,7 +90,7 @@ public class Fila
      * (leer enunciado)
      */
     public String toString() {
-      return null;
+      return "" ;
 
     }
 
